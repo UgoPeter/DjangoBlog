@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blog for developers</title>
+    </head>
+<body>
+    <div>
+        <h1>Welcome to my page!</h1>
+    </div>
+
+    {% for post in posts %}
+    <div>
+        <p>Published: {{  post.publish_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <em>{{ post.text|linebreaksbr }}</em>
+    </div>
+    {% endfor %}
+</body>
+
+</html>
